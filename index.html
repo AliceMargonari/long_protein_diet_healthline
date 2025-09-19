@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are There Risks Associated with Eating Too Much Protein?- Healthline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #ffffff;
+      color: #111;
+    }
+    .logo {
+      text-align: left;
+      margin-bottom: 2px;
+    }
+    .logo img {
+      max-width: 30%;
+      height: auto;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .meta {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .subhead {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .share-link {
+      color: #326891;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="healthline-logo.png" alt="Healthline">
+  </div>
+  <br>
+  <br>
+  <h1>Are There Risks Associated with Eating Too Much Protein?</h1>
+
+<br>
+<br>
+<p>If you eat too much protein, you may experience uncomfortable digestive side effects. Eating certain sources of protein in excess may cause other health issues, including increasing your cancer risk. It’s important to understand the health concerns related to excess protein in the body, especially if you follow an excessively high-protein diet for an extended period. </p>
+<p> <b> Weight gain. </b> High-protein diets may tout weight loss, but this type of weight loss may only be short-term. Excess protein consumed is usually stored as fat, while the surplus of amino acids is excreted. This can lead to weight gain over time, especially if you consume too many calories while trying to increase your protein intake. </p>
+
+<p> <b> Kidney damage. </b> Excess protein can cause damage in people with preexisting kidney disease. This is because of the excess nitrogen found in the amino acids that make up proteins. Damaged kidneys have to work harder to get rid of the extra nitrogen and waste products of protein metabolism. </p>
+
+<p> <b> Increased cancer risk. </b> Studies have shown that certain high-protein diets that are particularly high in red meat-based protein are linked to an increased risk of various health issues, including cancer. Eating more red and/or processed meat is associated with colorectal, breast, and prostate cancer.</p>
+
+<p> <b> Heart disease. </b> Studies have shown that eating lots of red meat and full-fat dairy foods as part of a high-protein diet may lead to heart disease. This could be related to higher intakes of saturated fat and cholesterol. </p>
+
+<p> <b> Calcium loss. </b> Diets that are high in protein and meat may cause calcium loss. This is sometimes associated with osteoporosis and poor bone health.</p>
+
+<p> <b> Dehydration. </b> Your body flushes out excess nitrogen with fluids and water. This can leave you dehydrated even though you may not feel more thirsty than usual. </p>
+<br>
+<p> It’s important that you take the risks into consideration before starting a high-protein diet to determine whether or not it’s suitable for you. Always speak to your doctor before beginning any new diet, especially if you have any health conditions. </p>
+
+  <br>
+  <p style="text-transform: uppercase; color: blue; margin-bottom: 30px;">
+  You may now close this tab and return to the survey  
+  </p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const prolific_pid = params.get("prolific_pid");
+  const condition = params.get("condition");
+  const page_name = params.get("page_name");
+
+  // Replace visible URL to hide condition and page_name
+  if (prolific_pid) {
+    const cleanUrl = window.location.origin + window.location.pathname + "?prolific_pid=" + encodeURIComponent(prolific_pid);
+    window.history.replaceState({}, document.title, cleanUrl);
+  }
+
+  const entryTime = new Date();
+
+  const entryIds = {
+    prolific_pid: "entry.434492044",
+    condition: "entry.1225575535",
+    page_name: "entry.925161350",
+    entry_time: "entry.732388184",
+    exit_time: "entry.372350073",
+    time_spent: "entry.298480214"
+  };
+
+  window.addEventListener("unload", function () {
+    const exitTime = new Date();
+    const timeSpent = Math.round((exitTime - entryTime) / 1000);
+
+    const formData = new FormData();
+    formData.append(entryIds.prolific_pid, prolific_pid);
+    formData.append(entryIds.condition, condition);
+    formData.append(entryIds.page_name, page_name);
+    formData.append(entryIds.entry_time, entryTime.toISOString());
+    formData.append(entryIds.exit_time, exitTime.toISOString());
+    formData.append(entryIds.time_spent, timeSpent);
+
+    navigator.sendBeacon(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfPfKcw2oVlFINPNThg4q0FgfVdxxCCLn40vwPY6nXEH2ybeQ/formResponse",
+      new URLSearchParams(formData)
+    );
+  });
+</script>
+
+
+</body>
+</html>
